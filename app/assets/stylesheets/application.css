@@ -26,13 +26,19 @@ body {
     background-color: #eceff6;
 }
 
+h1 {
+    font-family: "tahoma", "lucida grande", sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    line-height: 10%;
+}
+
 
 #blueBar {
     background-color: #4e69a2;
     height: 90px;
     width: 100%;
     padding: 0px;
-
 }
 
 
@@ -41,3 +47,5 @@ body {
     left: 150px;
     top: 20px;
 }
+
+
