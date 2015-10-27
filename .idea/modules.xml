@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/facebook_app/.idea/devise.iml" filepath="$USER_HOME$/facebook_app/.idea/devise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/facebook_app.iml" filepath="$PROJECT_DIR$/.idea/facebook_app.iml" />
     </modules>
   </component>
 </project>
