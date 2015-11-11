@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar-custom {
+  background-color: #4A68AB;
+  border-color: #4A68AB;
+  padding:17px;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  line-height: 19px;
+  padding: 9px 10px 11px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color:  #ffffff;
+  font-size: 13px;
+}
+
+
+input {
+  font-size: 14px;
+  height: 36px;
+  line-height: 14px;
+}
+
+.container  {
+  margin-top: 130px;
+  left: 150px;
+}
+
+body {
+    font-family: "tahoma", "lucida grande", sans-serif;
+    color: #666666;
+    outline-style: none;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: normal;
+    background-color: #eceff6;
+}
+
+h1{
+  font-family: "tahoma", "lucida grande", sans-serif;
+  font-style: normal;
+  line-height: 10%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#logoBanner {
+    position: absolute;
+    left: 150px;
+    top: 5px;
+}
+
+

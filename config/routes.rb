@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
+
+  get 'dashboard/search'
+  get 'dashboard/results'
+  post 'dashboard/results'
+  get 'dashboard/home'
+  post 'dashboard/home'
+  get 'dashboard/viewguest'
+  get 'dashboard/addfriend'
+  get 'home/index' => 'home'
+  get 'home/about' => 'about'
+  get 'dashboard/profile2'
+  post 'dashboard/profile2'
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :dashboard
-  get 'dashboard/profile'
-  post 'dashboard/profile'
   root to: "home#index"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

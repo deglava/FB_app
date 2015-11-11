@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= render partial: "layouts/header" %>
+
   <title>Welcome to Facebook</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,15 +10,7 @@
 </head>
 <body>
 
-<div id="blueBar" class="broke-endless-pages">
-  <div id="logoBanner">
-    <img src="/facebook.png", alt text="facebook logo", width="210"/>
-  </div>
-
-</div>
-
-
-
+<div id="blueBar" class="broke-endless-pages"></div>
 
 <%= yield %>
 

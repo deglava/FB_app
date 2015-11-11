@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Results page</h1>
+  <%for user in @users%>
+    <li>
+        <%=user.Fname%>,
+        <%=user.Lname%>,
+        <%=user.email%>
+        <%=link_to(" View profile ", :controller=>"dashboard", :action=>"viewguest", :id=>user)%>
+        <%=link_to(" Add to friends ",
+                   url_for(:controller=>"dashboard", :action=>"addfriend", :id=>user),
+                   :confirm=>"Are you sure?")%>
+    </li>
+  <%end%>
+
+</div>

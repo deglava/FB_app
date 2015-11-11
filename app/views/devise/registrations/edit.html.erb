@@ -1,42 +1,56 @@
-<%= link_to "Back", :back %>
+<!DOCTYPE HTML>
+<div class="container">
+
+
+<%= link_to "Home", :back %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
 
-    <div class="field">
-      <%= f.label :Fname %><br />
-      <%= f.text_field :Fname, autofocus: true %>
-    </div>
-    <div class="field">
-      <%= f.label :Lname %><br />
-      <%= f.text_field :Lname, autofocus: true %>
-    </div>
-  <div class="field">
+    <div class="field form-group">
+      <p>
+      <%= f.label :First_name %> </br>
+      <%= f.text_field :Fname, :style => "width:30%", autofocus: true %>
+
+      </p>
+
+      <p>
+      <%= f.label :Last_name %>  </br>
+      <%= f.text_field :Lname,  :style => "width:30%", autofocus: true %>
+      </p>
+
+      <p>
+      <%= f.label :Address %><br />
+      <%= f.text_field :Address, :style => "width:30%", autofocus: true %>
+      </p>
+
+      <p>
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <%= f.email_field :email, :style => "width:30%", autofocus: true %>
+    </p>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <p>
+    <%= f.label :password %> </br> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, :style => "width:30%", autocomplete: "off" %>
 
-  <div class="field">
+    </p>
+
+      <p>
+
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <%= f.password_field :password_confirmation, :style => "width:30%", autocomplete: "off" %>
+    </p>
+      <p>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
+    <%= f.label :current_password %></br> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, :style => "width:30%", autocomplete: "off" %>
+    </p>
     <p>
       <%= f.label "Birthday"%>
       </br>
@@ -50,13 +64,28 @@
       <%= f.label :male %>
     </p>
 
+      <p>
+      <%= f.label :About %><br />
+      <%= f.text_area :About, :style => "width:30%",  autofocus: true %>
+      </p>
+
+      <p>
+      <%= f.label :Quotes %><br />
+      <%= f.text_area :Fav_quotes, :style => "width:30%", autofocus: true %>
+      </p>
+    </div>
+
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class:"btn btn-primary", :style=>'width: 340px;'  %>
   </div>
+      </br>
 <% end %>
 
+</br>
 
+<p> <strong>Unhappy? </strong> <%= button_to "Cancel my account", registration_path(resource_name), class:"btn
+btn-danger", data: {confirm: "Are you sure?" }, method: :delete %></p>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-
+  </br>
+  </br>
+</div>

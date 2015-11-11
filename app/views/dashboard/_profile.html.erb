@@ -1,0 +1,49 @@
+<%=form_for :user do |f|%>
+    <div class="field form-group">
+      <p>
+        <%= f.label :First_name %> </br>
+        <%= f.text_field :Fname, :style => "width:30%", autofocus: true, disabled: true %>
+
+      </p>
+
+      <p>
+        <%= f.label :Last_name %>  </br>
+        <%= f.text_field :Lname,  :style => "width:30%", autofocus: true , disabled: true%>
+      </p>
+
+      <p>
+        <%= f.label :Address %><br />
+        <%= f.text_field :Address, :style => "width:30%", autofocus: true, disabled: true %>
+      </p>
+
+      <p>
+        <%= f.label :email %><br />
+        <%= f.email_field :email, :style => "width:30%", autofocus: true, disabled: true %>
+      </p>
+
+      <p>
+        <%= f.label "Birthday"%>
+        </br>
+        <%= f.date_select :DOB, start_year: 1920, end_year: 2015, default: 18.years.ago, autofocus: true , disabled: true%>
+      </p>
+
+      <p>
+        <%= f.radio_button :gender, 'Female', disabled: true%>
+        <%= f.label :female %>
+        <%= f.radio_button :gender, 'Male', disabled: true%>
+        <%= f.label :male %>
+      </p>
+
+      <p>
+        <%= f.label :About %><br />
+        <%= f.text_area :About, :style => "width:30%",  autofocus: true, disabled: true %>
+      </p>
+
+      <p>
+        <%= f.label :Quotes %><br />
+        <%= f.text_area :Fav_quotes, :style => "width:30%", autofocus: true, disabled: true %>
+      </p>
+    </div>
+<% end %>
+
+

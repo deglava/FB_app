@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#heading
+{
+  text-align: center;
+}
+
+IMG.displaycenter
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#index h1 {
+  color:#3b5998;
+  font-size: 40px;
+  text-align: center;
+  font-weight: normal;
+
+}
+
+#font
+{
+  font-size: 13px;
+}
+
+

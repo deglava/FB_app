@@ -1,3 +1,5 @@
+<div class="container">
+
 <h2>Resend unlock instructions</h2>
 
 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
@@ -9,8 +11,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
+    <%= f.submit "Resend unlock instructions", class: "btn btn-primary"  %>
   </div>
 <% end %>
 
 <%= render "facebook_app/shared/links" %>
+
+    </div>

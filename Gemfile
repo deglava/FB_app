@@ -5,7 +5,12 @@ source 'https://rubygems.org'
 # gem "rake"
 
 
+gem 'bootstrap-sass'
+
 gem 'activesupport'
+
+gem 'simple-navigation-bootstrap'
+gem 'simple-navigation'
 
  # gem 'facebook_app'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

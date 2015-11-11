@@ -1,35 +1,36 @@
-<div id="Signup_Form">
+<div id="user_form">
 
+  <body id="fontedit">
 <h1>Sign up</h1>
-  <h2>It's free. And always will be.</h2>
+  <h3><em>It's free. And always will be.</em></h3>
+</body>
 </br>
+  </br>
 
 
-<div id="labeltext">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div id="labeltext">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <p>
-    <%= f.text_field :Fname, :placeholder => 'First Name', autofocus: true %>
-    <%= f.text_field :Lname, :placeholder => 'Last Name', autofocus: true %>
-      </p>
+
+      <div class="field form-group">
+      <p>
+        <%= f.text_field :Fname, :style => "width:49%", :placeholder => 'First Name', autofocus: true %>
+        <%= f.text_field :Lname, :style => "width:49%", :placeholder => 'Last Name', autofocus: true %>
+        </p>
 
     <p>
-      <%= f.email_field :email, :style => "width:407px", :placeholder => 'Email', autofocus: true %>
+        <%= f.email_field :email, :style => "width:100%", :placeholder => 'Email', autofocus: true %>
     </p>
 
     <p>
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %>
-      <br/>
-      <%= f.password_field :password, :style => "width:407px", autocomplete: "off" %>
+      <%= f.password_field :password, :placeholder => 'Password (8 characters minimum)', :style => "width:100%",
+                           autocomplete: "off" %>
     </p>
 
     <p>
-      <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation', :style => "width:407px", autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation', :style => "width:100%", autocomplete: "off" %>
     </p>
 
 
@@ -46,14 +47,28 @@
       <%= f.label :male %>
     </p>
 
-  </div>
     <p>
-    <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", class: "btn btn-primary btn-md", :style=>'width: 350px;'%>
     </p>
-  </div>
+      </div>
+
+
+
 <% end %>
 
-<%= render "devise/shared/links" %>
+  </div>
+  </div>
+</div>
 </div>
 
+<div class="container">
+<div id="signup_image">
+<img src="/fb_sign_up_home_page.png"/>
 </div>
+</div>
+
+<div id="imagebelow">
+  <img src="/facebook new sign up page.png"/>
+</div>
+
+

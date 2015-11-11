@@ -1,0 +1,71 @@
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom"   `>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div>
+
+      <!--DO NOT MESS WITH THIS CODE!!! IT WORKS COMPLETELY FINE! MOVE ALONG!-->
+      <a class="navbar-brand" href="/">
+              <div id="logoBanner">
+              <img alt="facebook logo" src="/facebook.png", width="210">
+              </div>
+            </a>
+          </div>
+
+
+      <!--right side of the navigation bar-->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+
+        <% if user_signed_in? %>
+
+            <li>
+              <%= form_tag(:controller => "dashboard", :action => "results", :method => "post") do %>
+                  <%= text_field_tag :search, params[:search] %>
+                  <%= submit_tag "Search" %>
+              <% end %>
+             <!-- <%= link_to "Search", controller: "dashboard", action: "search"  %>-->
+            </li>
+            <li>
+              <%= link_to "Edit profile", edit_user_registration_path %>
+            </li>
+
+            <li>
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
+             </li>
+            <li>
+              <%= link_to "Home", controller: "dashboard", action: "home", :id => current_user %>
+            </li>
+
+          <% else%>
+
+             <li>
+               <!--<span class="glyphicon glyphicon-user"></span>-->
+               <%= link_to "Sign up", new_user_registration_path %>
+            </li>
+
+
+            <li>
+               <!--<span class="glyphicon glyphicon-log-in"></span>-->
+               <%= link_to "Login", new_user_session_path %>
+            </li>
+          <%end%>
+        </li>
+      </ul>
+
+
+
+</div>
+  </div>
+
+</nav>
+    </div>
+
+
+

@@ -1,23 +1,28 @@
 <Title> Welcome to Facebook! </Title>
 
-<div id="user_nav">
-  <% if user_signed_in? %>
-      Signed in as  <%= current_user.Fname%>. Not you?
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
-  <% else%>
-      <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
-  <%end%>
-  <%flash.each do |name, msg|%>
-      <%= content_tag :div, msg, :id => "flash_#(name)"%>
-  <%end%>
+
+<!--JESS WILL FIGURE OUT HOW TO IMPLEMENT A MESSAGE TO DISPLAY "SIGN OUT SUCCESSFUL"
+DO NOT TOUCH THIS
+ if user_signed_out? %>
+    <div class="alert alert-warning" role="alert">
+      <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong> Successfully signed out! </strong>  end%>
+</div>
+ //-->
+
+<div class="container">
+  <div id="heading">
+  <body id="index">
+  <h1><strong>Welcome to Facebook!</strong></h1>
+  </br>
+  <p class="lead"> Facebook helps you connect and share with </br> the people in your life. </p>
+
+  </body>
+  </br>
+  </br>
 </div>
 
-</br>
-<div id="heading">
-<h1>Welcome to Facebook!</h1>
-</br>
-</br>
+<IMG class="displaycenter", img src="/facebook new sign up page.png"/>
+
+  </div>
 </div>
-
-<IMG class="displaycenter", img src="/facebooksignuppage.png"/>
-

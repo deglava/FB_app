@@ -1,0 +1,2 @@
+module RenderNavigationHelper
+  end

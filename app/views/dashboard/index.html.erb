@@ -1,15 +1,12 @@
+<div class="container">
 
-
-<div id="user_nav">
   <% if user_signed_in? %>
-      Signed in as  <%= current_user.Fname%>. Not you?
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
-  <%end%>
-  <%= link_to "Edit profile", edit_user_registration_path %>
+  <div class="alert alert-info" role="alert">
+    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong> Signed in as: </strong> <%= current_user.Fname%> <%end%>
+  </div>
+
+<h1> page</h1>
+
 
 </div>
-
-<h1>Dashboard page</h1>
-
-
-

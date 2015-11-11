@@ -1,0 +1,15 @@
+<div class="container">
+
+  <% if user_signed_in? %>
+      <div class="alert alert-info" role="alert">
+        <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong> Signed in as: </strong> <%= current_user.Fname%> <%end%>
+
+        <%= render partial: "profile"%>
+  </div>
+
+  <h1>Home page</h1>
+
+
+
+</div>
