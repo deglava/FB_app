@@ -2,5 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="development" uuid="1d6eeccd-42fa-4a7f-99d6-1d001f34e519" />
+    <data-source name="Rails facebook_app: development" uuid="62dbfd85-d5eb-46f0-bd2d-4e326e0cb017" />
+    <data-source name="Rails facebook_app: test" uuid="70746551-e9eb-4b8d-86b4-59c693892dca" />
   </component>
 </project>

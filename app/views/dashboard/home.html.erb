@@ -1,15 +1,35 @@
 <div class="container">
 
   <% if user_signed_in? %>
-      <div class="alert alert-info" role="alert">
-        <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong> Signed in as: </strong> <%= current_user.Fname%> <%end%>
-
-        <%= render partial: "profile"%>
+      <div class="alert alert-info alert-dismissibile fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+          <strong> Welcome back </strong> <%= current_user.Fname%>! <%end%>
   </div>
 
-  <h1>Home page</h1>
 
+  <br>
+  <h1>Home Page</h1>
+<br>
 
+  <div class="row">
+
+    <div class="col-lg-3">
+      <%= render 'dashboard/user_info' %>
+    </div>
+
+    <div id="newsfeed" class="col-lg-6">
+      <!--render posts here - from friends and users -->
+      <p>This will be the newsfeed</p>
+      </div>
+
+    <div class="col-lg-3">
+    <!--render additional links here-->
+      <p>These will be links on the right hand panel</p>
+
+  </div>
+</div>
 
 </div>

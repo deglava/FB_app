@@ -1,15 +1,30 @@
 <div class="container">
   <h1>Results page</h1>
+  <br />
+  <p>
   <%for user in @users%>
-    <li>
-        <%=user.Fname%>,
+<p>
+        <%=user.Fname%>
         <%=user.Lname%>,
-        <%=user.email%>
-        <%=link_to(" View profile ", :controller=>"dashboard", :action=>"viewguest", :id=>user)%>
-        <%=link_to(" Add to friends ",
+      <%=user.gender%>,
+      <%=user.DOB%>
+
+<br />
+<p>
+      <div class="btn-group">
+        <div class="btn btn-xs">
+          <%=button_to(" View profile ", :controller=>"dashboard", :action=>"viewguest",
+                                                    :id=>user)%>
+          </div>
+        <div class="btn btn-xs">
+      <%=button_to(" Add to friends ",
                    url_for(:controller=>"dashboard", :action=>"addfriend", :id=>user),
                    :confirm=>"Are you sure?")%>
-    </li>
+      </div>
+      </div>
+
+
+        </p>
   <%end%>
 
 </div>
