@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h1>Send message to:</h1>
+  <p>Username: <%=@user.Lname %></p>
+            <td align = "left">
+              <b> <%=@user.Fname%> </b>
+            </td>
+
+  </p>
+        <table width = "400">
+          <tr>
+            <td align ="left"> <%= image_tag @user.image.url(:small) %></td>
+            <td align = "center"> <b> Location: </b>  <%=@user.Address%> </td>
+            <td align = "center"> <b> Birthday:</b> <%=@user.DOB%>,</td>
+          </tr>
+        </table>
+        <p>
+</div>

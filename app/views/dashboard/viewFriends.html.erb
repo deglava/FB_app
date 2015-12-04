@@ -1,0 +1,43 @@
+
+  <title>View Your Friends</title>
+
+<div class="container">
+
+<h2><%=@user.Fname %>'s Friends</h2>
+  <br>
+<ul>
+  <% for user in @user.friends %>
+      <p>
+      <p>
+      <table width = "100">
+        <tr>
+          <td align = "left">
+            <b> <%=user.Fname%> </b>
+          </td>
+        </tr>
+      </table>
+      </p>
+
+
+      <table width = "400">
+        <tr>
+          <td align ="left"> <%= image_tag user.image.url(:small) %></td>
+          <td align = "center"> <b> Location: </b>  <%=user.Address%> </td>
+          <td align = "center"> <b> Birthday:</b> <%=user.DOB%></td>
+        </tr>
+      </table>
+      <p>
+      <!--<h1><percent=user.id%></h1>-->
+      <!--<h1><percent=current_user.id%></h1>-->
+      <div class="btn-group">
+        <div class="btn btn-xs">
+          <%=button_to("Unfriend", :controller=>"dashboard", :action=>"unfriend", :friend_id=>user.id, :method=>:post)%>
+        </div>
+        <div class="btn btn-xs">
+          <%=button_to("Send message", :controller=>"dashboard", :action=>"sendmessage", :friend_id=>user.id, :method=>:post)%>
+        </div>
+      </div>
+  <% end %>
+</ul>
+
+  </div>
