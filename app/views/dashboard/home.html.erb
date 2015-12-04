@@ -9,6 +9,13 @@
           <strong> Welcome back </strong> <%= current_user.Fname%>! <%end%>
   </div>
 
+  <h1>
+    <%=form_for :user, :url=>{:action=>"changeStatus", :id=>current_user} do |f|%>
+        Status: <%=f.text_field(:Status) %>
+        <%=submit_tag "Update"%>
+    <%end%>
+  </h1>
+
 
   <br>
   <h1>Home Page</h1>

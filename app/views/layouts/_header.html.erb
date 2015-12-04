@@ -42,6 +42,9 @@
             <li>
               <%= link_to "Home", controller: "dashboard", action: "home", :id => current_user %>
             </li>
+            <li>
+              <%= link_to "View Friends", controller: "dashboard", action: "viewFriends", :id => current_user%>
+            </li>
 
           <% else%>
 

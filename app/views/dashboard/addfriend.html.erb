@@ -1,10 +1,13 @@
 <div class="container">
   <h1>Are you sure you want to add to friends this profile?</h1>
   <%= render partial: "profile"%>
-  <%= form_tag(:controller => "dashboard", :action => "home", :id=>current_user) do %>
+  <%= form_tag(:controller => "dashboard", :action => "create", :friend_id=>@user) do %>
 
       <%= submit_tag "Add to friends" %>
   <% end %>
+  <%= form_tag(:controller => "dashboard", :action => "home", :id=>current_user) do %>
 
+      <%= submit_tag "Do not add" %>
+  <% end %>
 </div>
 

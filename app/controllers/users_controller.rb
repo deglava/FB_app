@@ -4,12 +4,14 @@ class UsersController < ApplicationController
   before_action :check_ownership, only: [:edit, :update]
   respond_to :html, :js
 
+
   def show
-    @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    # @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
 
   def edit
   end
+
 
   def update
     if @user.update(user_params)
@@ -22,17 +24,10 @@ class UsersController < ApplicationController
   def deactivate
   end
 
-  def friends
-    @friends = @user.following_users.paginate(page: params[:page])
-  end
-
-  def followers
-    @followers = @user.user_followers.paginate(page: params[:page])
-  end
 
   private
   def user_params
-    params.require(:user).permit(:Fname, :Lname)
+    params.require(:user).permit(:Fname, :Lname, :image)
   end
 
   def check_ownership

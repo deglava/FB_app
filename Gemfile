@@ -13,7 +13,7 @@ gem 'simple-navigation-bootstrap'
 gem 'simple-navigation'
 gem 'font-awesome-rails'
 
-gem 'carrierwave'
+gem 'paperclip'
  # gem 'facebook_app'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 

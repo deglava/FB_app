@@ -1,24 +1,26 @@
 <!DOCTYPE HTML>
+
+
 <div class="container">
 
 <h2>Edit Profile <%= resource_name.to_s.humanize %></h2>
+  <br>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true, method:
+      :put, class: 'form-horizontal' }) do |f| %>
+      <%= devise_error_messages! %>
 
     <div class="field form-group">
+
       <p>
-        <%= f.label :Avatar %> </br>
-
-        <%= f.file_field :avatar, multiple: false %>
+        <%= f.label :image %> </br>
+        <%= f.file_field :image %>
         <br>
-
       </p>
+
       <p>
       <%= f.label :First_name %> </br>
       <%= f.text_field :Fname, :style => "width:30%", autofocus: true %>
-
       </p>
 
       <p>
@@ -27,12 +29,12 @@
       </p>
 
       <p>
-      <%= f.label :Address %><br />
+      <%= f.label :Address %></br>
       <%= f.text_field :Address, :style => "width:30%", autofocus: true %>
       </p>
 
       <p>
-    <%= f.label :email %><br />
+    <%= f.label :email %></br>
     <%= f.email_field :email, :style => "width:30%", autofocus: true %>
     </p>
 
@@ -81,7 +83,7 @@
     </div>
 
   <div class="actions">
-    <%= f.submit "Update", class:"btn btn-primary", :style=>'width: 340px;'  %>
+    <%= f.submit "Update", class:"btn btn-primary", :style=>'width: 340px;' %>
   </div>
       </br>
 <% end %>

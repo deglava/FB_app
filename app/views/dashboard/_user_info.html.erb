@@ -1,9 +1,11 @@
 <div id="user-info" class="well">
   <div class="text-center">
-    <%= render 'layouts/avatar', user: @user %>
-    <br>
+    <!--<percent= link_to image_tag(@user.image.url(:small)), @user.image.url %>-->
+    <!--<percent= image_tag(current_user.image.url(:small)) %>-->
+    <%= image_tag @user.image.url(:small) %>    <br>
+
     <h5>
-      <%= link_to current_user.Fname, controller: "dashboard", action: "home", :id => current_user %>
+      <%= link_to current_user.Fname, controller: "dashboard", action: "viewguest", :id => current_user %>
     </h5>
 
   </div>

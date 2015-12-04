@@ -1,6 +1,11 @@
 <%=form_for :user do |f|%>
     <div class="field form-group">
       <p>
+        <%= f.label :Status %> </br>
+        <%= f.text_field :Status, :style => "width:30%", autofocus: true, disabled: true %>
+
+      </p>
+      <p>
         <%= f.label :First_name %> </br>
         <%= f.text_field :Fname, :style => "width:30%", autofocus: true, disabled: true %>
 

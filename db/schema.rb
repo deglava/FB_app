@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20240519054106) do
+ActiveRecord::Schema.define(version: 20240519054111) do
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -33,7 +40,11 @@ ActiveRecord::Schema.define(version: 20240519054106) do
     t.string   "About"
     t.string   "Address"
     t.string   "Fav_quotes"
-    t.string   "avatar"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "Status"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

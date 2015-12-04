@@ -1,10 +1,15 @@
+<!DOCTYPE HTML>
+
 <div class="container">
   <div id="user_form">
 
   <h1>Login</h1>
 </br>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+        <%= devise_error_messages! %>
+
+        <div class="field">
     <p>
     <%= f.email_field :email, :style => "width:100%", :placeholder => 'Email', autofocus: true %>
     </p>

@@ -1,74 +1,70 @@
+<div class="container">
+
 <div id="user_form">
 
-  <body id="fontedit">
-<h1>Sign up</h1>
+  <div id="fontedit">
+  <h1>Sign up</h1>
   <h3><em>It's free. And always will be.</em></h3>
-</body>
-</br>
-  </br>
+  </div>
+  <br>
+  <br>
 
 
   <div id="labeltext">
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
 
-      <div class="field form-group">
-      <p>
-        <%= f.text_field :Fname, :style => "width:49%", :placeholder => 'First Name', autofocus: true %>
-        <%= f.text_field :Lname, :style => "width:49%", :placeholder => 'Last Name', autofocus: true %>
-        </p>
+        <div class="field">
+          <p>
+            <%= f.text_field :Fname, :style => "width:49%", :placeholder => 'First Name', autofocus: true %>
+            <%= f.text_field :Lname, :style => "width:49%", :placeholder => 'Last Name', autofocus: true %>
+          </p>
 
-    <p>
-        <%= f.email_field :email, :style => "width:100%", :placeholder => 'Email', autofocus: true %>
-    </p>
+          <p>
+            <%= f.email_field :email, :style => "width:100%", :placeholder => 'Email', autofocus: true %>
+          </p>
 
-    <p>
-      <%= f.password_field :password, :placeholder => 'Password (8 characters minimum)', :style => "width:100%",
-                           autocomplete: "off" %>
-    </p>
+          <p>
+            <%= f.password_field :password, :placeholder => 'Password (8 characters minimum)', :style => "width:100%",
+                                 autocomplete: "off" %>
+          </p>
 
-    <p>
-      <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation', :style => "width:100%", autocomplete: "off" %>
-    </p>
-
-
-    <p>
-    <%= f.label "Birthday"%>
-    </br>
-    <%= f.date_select :DOB, start_year: 1920, end_year: 2015, default: 18.years.ago, autofocus: true %>
-  </p>
-
-    <p>
-      <%= f.radio_button :gender, 'Female'%>
-      <%= f.label :female %>
-      <%= f.radio_button :gender, 'Male'%>
-      <%= f.label :male %>
-    </p>
-
-    <p>
-      <%= f.submit "Sign up", class: "btn btn-primary btn-md", :style=>'width: 350px;'%>
-    </p>
-      </div>
+          <p>
+            <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation', :style => "width:100%", autocomplete: "off" %>
+          </p>
 
 
+          <p>
+            <%= f.label "Birthday"%>
+            <br>
+            <%= f.date_select :DOB, start_year: 1920, end_year: 2015, default: 18.years.ago, autofocus: true %>
+          </p>
 
-<% end %>
+          <p>
+            <%= f.radio_button :gender, 'Female'%>
+            <%= f.label :female %>
+            <%= f.radio_button :gender, 'Male'%>
+            <%= f.label :male %>
+          </p>
+        </div>
 
+          <p>
+            <%= f.submit "Sign up", class: "btn btn-primary btn-md", :style=>'width: 350px;'%>
+          </p>
+        </div>
+    <% end %>
+
+    </div>
+
+  <div class="row">
+    <div class="col-md-6">    <img src="/fb_sign_up_home_page.png"/> </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-6">  <img src="/facebook new sign up page.png"/></div>
   </div>
-</div>
-</div>
-
-<div class="container">
-<div id="signup_image">
-<img src="/fb_sign_up_home_page.png"/>
-</div>
-</div>
-
-<div id="imagebelow">
-  <img src="/facebook new sign up page.png"/>
 </div>
 
 

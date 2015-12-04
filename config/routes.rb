@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+
+  get 'friendship/destroy'
+  post 'friendship/destroy'
+  get 'dashboard/unfriend'
+  post 'dashboard/unfriend'
+  get 'dashboard/sendmessage'
+  post 'dashboard/sendmessage'
+  get 'dashboard/viewFriends'
+  post 'dashboard/viewFriends'
   get 'dashboard/search'
   get 'dashboard/results'
   post 'dashboard/results'
@@ -11,6 +20,11 @@ Rails.application.routes.draw do
   get 'home/about' => 'about'
   get 'dashboard/profile2'
   post 'dashboard/profile2'
+  post 'dashboard/viewguest'
+  post 'dashboard/addfriend'
+  get 'dashboard/changeStatus'
+  post 'dashboard/changeStatus'
+  resources :friendships
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :dashboard
   root to: "home#index"

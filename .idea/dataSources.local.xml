@@ -4,5 +4,17 @@
     <data-source name="development" uuid="1d6eeccd-42fa-4a7f-99d6-1d001f34e519" />
     <data-source name="Rails facebook_app: development" uuid="62dbfd85-d5eb-46f0-bd2d-4e326e0cb017" />
     <data-source name="Rails facebook_app: test" uuid="70746551-e9eb-4b8d-86b4-59c693892dca" />
+    <data-source name="Rails facebook_app: development" uuid="d468ae89-6b2a-48f7-a97a-3df0bce947c8">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails facebook_app: test" uuid="8afd2b58-2d3d-46c3-bf08-f78d5f5c597e">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails facebook_app: development" uuid="1d130dbf-fddc-4e65-ab7f-75d79dde7949">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails facebook_app: test" uuid="f8b96f57-ed91-45a2-969a-76d9ce6a8a4e">
+      <first-sync>true</first-sync>
+    </data-source>
   </component>
 </project>

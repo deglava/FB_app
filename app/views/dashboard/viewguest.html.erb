@@ -1,5 +1,10 @@
 <div class="container">
-  <h1>ViewGuest page</h1>
-  <%= render partial: "profile"%>
+  <h1>View Profile</h1>
+  <br \>
+  <%= image_tag @user.image.url(:small) %>
+  <br \>
+  <p>
+    <%= render partial: "profile"%>
+  </p>
 
 </div>
