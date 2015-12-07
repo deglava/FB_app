@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'dashboard/addevent'
+  post 'dashboard/addevent'
+  get 'dashboard/viewtimeline'
+  post 'dashboard/viewtimeline'
   get 'friendship/destroy'
   post 'friendship/destroy'
   get 'dashboard/unfriend'

@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :friendships
   has_many :friends, :through => :friendships
+  has_many :timelines
+  #has_many :posts, :through => :timelines
 
   # Include default facebook_app modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

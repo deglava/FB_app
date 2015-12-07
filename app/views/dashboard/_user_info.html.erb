@@ -1,12 +1,28 @@
 <div id="user-info" class="well">
   <div class="text-center">
-    <!--<percent= link_to image_tag(@user.image.url(:small)), @user.image.url %>-->
-    <!--<percent= image_tag(current_user.image.url(:small)) %>-->
     <%= image_tag @user.image.url(:small) %>    <br>
+
 
     <h5>
       <%= link_to current_user.Fname, controller: "dashboard", action: "viewguest", :id => current_user %>
     </h5>
+
+<hr>
+    <% if @user.DOB.present? %>
+        <h5>
+          <span class="glyphicon glyphicon-hourglass" aria-hidden="true"> </span>
+          <%= "#{pluralize(age(@user.DOB), 'year')} old" %>
+        </h5>
+    <% end %>
+
+    <hr>
+
+    <% if @user.Address.present? %>
+        <h5>
+          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+          <%= @user.Address %>
+        </h5>
+    <% end %>
 
   </div>
 </div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>View Timeline</h1>
+  <br \>
+
+  <div class="btn btn-xs">
+    <%=button_to("View profile", :controller=>"dashboard", :action=>"viewguest", :id=>@user, :method=>:post)%>
+  </div>
+
+  <p>
+    <%= render partial: "timeln"%>
+  </p>
+</div>

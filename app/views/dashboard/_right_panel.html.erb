@@ -1,0 +1,24 @@
+<div class="well">
+  <div class="text-center">
+
+    <h5>
+      <%= fa_icon 'user' %>
+      <%= link_to "View Friends", controller: "dashboard", action: "viewFriends", :id => @user%>
+    </h5>
+    <hr>
+
+    <h5>
+      <%= fa_icon 'globe' %>
+      <%= link_to "View profile", :controller=>"dashboard", :action=>"viewguest", :id=>@user, :method=>:post %>
+    </h5>
+  <hr>
+
+<h5>
+  <%= fa_icon 'pencil' %>
+  <%= link_to "Edit profile", edit_user_registration_path %>
+</h5>
+
+
+
+</div>
+</div>

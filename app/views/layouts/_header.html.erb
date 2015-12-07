@@ -30,21 +30,15 @@
                   <%= text_field_tag :search, params[:search] %>
                   <%= submit_tag "Search" %>
               <% end %>
-             <!-- <%= link_to "Search", controller: "dashboard", action: "search"  %>-->
-            </li>
-            <li>
-              <%= link_to "Edit profile", edit_user_registration_path %>
             </li>
 
             <li>
               <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
              </li>
             <li>
-              <%= link_to "Home", controller: "dashboard", action: "home", :id => current_user %>
+              <%= link_to "Home",  controller: "dashboard", action: "home", :id => current_user %>
             </li>
-            <li>
-              <%= link_to "View Friends", controller: "dashboard", action: "viewFriends", :id => current_user%>
-            </li>
+
 
           <% else%>
 
@@ -59,7 +53,6 @@
                <%= link_to "Login", new_user_session_path %>
             </li>
           <%end%>
-        </li>
       </ul>
 
 
@@ -68,7 +61,6 @@
   </div>
 
 </nav>
-    </div>
 
 
 

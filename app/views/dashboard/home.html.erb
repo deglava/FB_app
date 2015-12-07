@@ -6,37 +6,10 @@
           <span aria-hidden="true">&times;</span>
           <span class="sr-only">Close</span>
         </button>
-          <strong> Welcome back </strong> <%= current_user.Fname%>! <%end%>
+        <strong> Welcome back </strong> <%= current_user.Fname%>! <%end%>
   </div>
-
-  <h1>
-    <%=form_for :user, :url=>{:action=>"changeStatus", :id=>current_user} do |f|%>
-        Status: <%=f.text_field(:Status) %>
-        <%=submit_tag "Update"%>
-    <%end%>
-  </h1>
-
-
-  <br>
-  <h1>Home Page</h1>
-<br>
-
-  <div class="row">
-
-    <div class="col-lg-3">
-      <%= render 'dashboard/user_info' %>
-    </div>
-
-    <div id="newsfeed" class="col-lg-6">
-      <!--render posts here - from friends and users -->
-      <p>This will be the newsfeed</p>
-      </div>
-
-    <div class="col-lg-3">
-    <!--render additional links here-->
-      <p>These will be links on the right hand panel</p>
-
-  </div>
+    <%= render partial:"timeln"%>
 </div>
 
-</div>
+
+
