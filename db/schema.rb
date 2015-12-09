@@ -11,13 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20240519054112) do
+ActiveRecord::Schema.define(version: 20240519054118) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "timeline_id"
+    t.integer  "msg_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "msg"
+  end
 
   create_table "friendships", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recev_id"
+    t.boolean  "new"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "msg"
+  end
+
+  create_table "privatemsgs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "rec_id"
+    t.string   "msg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "newmsg"
   end
 
   create_table "timelines", force: :cascade do |t|

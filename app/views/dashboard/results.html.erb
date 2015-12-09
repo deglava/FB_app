@@ -27,7 +27,7 @@
           <p>
           <div class="btn-group">
             <div class="btn btn-xs">
-              <%=button_to(" View profile ", :controller=>"dashboard", :action=>"viewtimeline", :id=>user)%>
+              <%=button_to(" View profile ", :controller=>"dashboard", :action=>"home", :id=>user)%>
             </div>
 
             <% for friend in current_user.friends %>

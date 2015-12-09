@@ -1,0 +1,2 @@
+class PrivatemsgsController < ApplicationController
+end

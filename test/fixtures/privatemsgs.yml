@@ -2,8 +2,10 @@
 
 one:
   user_id: 1
-  post: MyString
+  rec_id: MyString
+  msg: MyString
 
 two:
   user_id: 1
-  post: MyString
+  rec_id: MyString
+  msg: MyString

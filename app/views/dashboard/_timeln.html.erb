@@ -1,75 +1,51 @@
-<div id="dashboard">
-
-  <div class="row">
-    <div class="col-lg-3">
-      <%= render 'dashboard/user_info' %>
-    </div>
-
-    <div class="col-lg-6">
-      <div class="well">
-
-    <%if @user == current_user%>
-
-            <%=form_for :user, :url=>{:action=>"changeStatus", :id=>current_user} do |f|%>
-                <div class="form-group">
-                  <h4>Update Status</h4>
-                  <%= f.text_area :Status, class: 'form-control', autofocus: true, placeholder: 'What\'s up?' %>
-                </div>
-
-                <div class="form-group">
-                  <%= f.submit 'Post', class: 'btn btn-primary'%>
-                </div>
-            <% end %>
 
 
-    <%else%>
-
-
-            <%=form_for :user, :url=>{:action=>"changeStatus", :id=>current_user} do |f|%>
-                <div class="form-group">
-                  <h4>Current Status</h4>
-                  <%= f.text_area :Status, class: 'form-control', autofocus: true, disabled: true, placeholder: 'What\'s up?' %>
-                </div>
-            <% end %>
-
-    <%end%>
-
-        <%=form_for :timeline, :url=>{:action=>"addevent", :id=>@user} do |f|%>
-            <div class="form-group">
-              <h4>Add new post</h4>
-              <%= f.text_area :post, class: 'form-control', autofocus: true, placeholder: 'What\'s up?' %>
-            </div>
-
-            <div class="form-group">
-              <%= f.submit 'Post', class: 'btn btn-primary'%>
-            </div>
-        <% end %>
-
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <%= render 'dashboard/right_panel' %>
-    </div>
+<div class="row">
+  <div class="col-lg-3">
   </div>
 
-  <div class="row">
-    <div class="col-lg-3">
-    </div>
+  <div id="newsfeed" class="col-lg-6">
+    <div class="well">
+      <div class="content form-group">
+        <h5>
+          <% for timeline in @user.timelines %>
+              <%=form_for :comment, :url=>{:action=>"addcomment", :id=>timeline.id} do |f|%>
+                  <p>
+                    <%@owner = timeline.comments%>
 
-    <div id="newsfeed" class="col-lg-6">
-      <div class="well">
-        <div class="content">
-          <h5>
-            <%= current_user.Status%>
-          </h5>
+                    <% for msgs in @owner %>
+                      <div class="form-group">
+                        <%= image_tag User.find(msgs.msg_id).image.url(:small) %></td>
+                      </div>
 
-          </div>
-    </div>
-    </div>
+                      <div class="form-group">
+                        <%=msgs.msg%>
+                        <br>
+                        <%=msgs.created_at%>
+                  <% end %>
+                  </div>
+                  </p>
+                  <p>
+                    <%= f.text_area :msg, class: 'form-control', autofocus: true, placeholder: 'Write a comment...' %>
+                  </p>
+                  <%= f.submit 'Add comments', class: 'btn btn-primary'%>
+                  <br>
+                  <hr>
+                  <br>
+              <% end %>
+          <% end %>
+        </h5>
+      </div>
 
-    <div class="col-lg-3">
+
+      </h5>
     </div>
+  </div>
+</div>
+
+<div class="col-lg-3">
+</div>
 
 </div>
-</div>
+
+

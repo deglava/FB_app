@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 1
-  post: MyString
+  sender_id: 
+  recev_id: MyString
+  new: false
 
 two:
-  user_id: 1
-  post: MyString
+  sender_id: 
+  recev_id: MyString
+  new: false

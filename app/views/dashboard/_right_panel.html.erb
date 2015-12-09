@@ -12,11 +12,15 @@
       <%= link_to "View profile", :controller=>"dashboard", :action=>"viewguest", :id=>@user, :method=>:post %>
     </h5>
   <hr>
+    <%if @user.id == current_user.id%>
+        <h5>
+          <%= fa_icon 'pencil' %>
+          <%= link_to "Edit profile", edit_user_registration_path %>
+        </h5>
 
-<h5>
-  <%= fa_icon 'pencil' %>
-  <%= link_to "Edit profile", edit_user_registration_path %>
-</h5>
+
+  <%end%>
+
 
 
 

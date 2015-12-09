@@ -27,15 +27,17 @@
         </tr>
       </table>
       <p>
-      <!--<h1><percent=user.id%></h1>-->
-      <!--<h1><percent=current_user.id%></h1>-->
+
       <% if @user == current_user%>
           <div class="btn-group">
+            <div class="btn btn-xs">
+              <%=button_to(" View profile ", :controller=>"dashboard", :action=>"home", :id=>user)%>
+            </div>
             <div class="btn btn-xs">
               <%=button_to("Unfriend", :controller=>"dashboard", :action=>"unfriend", :friend_id=>user.id, :method=>:post)%>
             </div>
             <div class="btn btn-xs">
-              <%=button_to("Send message", :controller=>"dashboard", :action=>"sendmessage", :friend_id=>user.id, :method=>:post)%>
+              <%=button_to("Send message", :controller=>"dashboard", :action=>"sendmessage", :id=>user.id, :method=>:post)%>
             </div>
           </div>
       <%end%>

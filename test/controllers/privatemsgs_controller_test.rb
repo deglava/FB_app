@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TimelinesControllerTest < ActionController::TestCase
+class PrivatemsgsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -8,8 +8,69 @@
         </button>
         <strong> Welcome back </strong> <%= current_user.Fname%>! <%end%>
   </div>
-    <%= render partial:"timeln"%>
+
+  <%if @user == current_user%>
+
+      <%=form_for :user, :url=>{:action=>"changeStatus", :id=>current_user} do |f|%>
+          <div class="form-group">
+            <h4>Update Status</h4>
+            <%= f.text_area :Status, class: 'form-control', autofocus: true, placeholder: 'What\'s up?' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit 'Update', class: 'btn btn-primary'%>
+          </div>
+      <% end %>
+
+
+
+  <%else%>
+
+
+
+      <%=form_for :user, :url=>{:action=>"changeStatus", :id=>current_user} do |f|%>
+          <div class="form-group">
+            <h4>Current Status</h4>
+            <%= f.text_area :Status, class: 'form-control', autofocus: true, disabled: true, placeholder: 'What\'s up?' %>
+          </div>
+      <% end %>
+
+
+  <%end%>
+
+
+  <div id="dashboard">
+
+  <div class="row">
+    <div class="col-lg-3">
+      <%= render 'dashboard/user_info' %>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="well">
+        <%=form_for :timeline, :url=>{:action=>"addevent", :id=>@user} do |f|%>
+            <div class="form-group">
+              <h4>Add new timeline</h4>
+              <%= f.text_area :msg,  class: 'form-control', autofocus: true, placeholder: 'What\'s up?' %>
+            </div>
+
+            <div class="form-group">
+              <%= f.submit 'Post', class: 'btn btn-primary'%>
+            </div>
+        <% end %>
+
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <%= render 'dashboard/right_panel' %>
+    </div>
+  </div>
+  <%= render partial:"timeln"%>
+
+  </div>
 </div>
+
 
 
 

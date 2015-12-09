@@ -1,0 +1,66 @@
+
+<title>View your messages</title>
+
+<div class="container">
+  </p>
+
+
+  <table width = "400">
+    <tr>
+      <td align ="left"> <%= image_tag @user.image.url(:small) %></td>
+      <td align = "center"> <b> Location: </b>  <%=@user.Address%> </td>
+      <td align = "center"> <b> Birthday:</b> <%=@user.DOB%></td>
+    </tr>
+  </table>
+  <p>
+
+  <h2><%=@user.Fname %>'s Messages</h2>
+  <br>
+
+
+  <ul>
+    <ul>
+      <% for msg in current_user.privatemsgs %>
+          <p>
+
+          <table width = "400">
+            <tr>
+
+              <%= image_tag User.find(msg.rec_id).image.url(:small) %>
+
+              <td align = "right"> <b><%=msg.msg%></td>
+
+
+
+              <td>
+
+              </td>
+            </tr>
+          </table>
+          <p>
+
+      <%end%>
+      <div class="col-lg-6">
+        <div class="well">
+          <%=form_for :privatemsg, :url=>{:action=>"submitmsg", :id=>@user} do |f|%>
+              <div class="form-group">
+                <h4>Send private message</h4>
+                <%= f.text_area :msg,  class: 'form-control', autofocus: true, placeholder: 'What\'s up?' %>
+              </div>
+              <div class="form-group">
+                <%= f.submit 'Send', class: 'btn btn-primary'%>
+              </div>
+          <% end %>
+
+        </div>
+      </div>
+
+    </ul>
+
+  </ul>
+
+
+
+
+
+</div>

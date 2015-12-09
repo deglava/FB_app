@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-
+  get 'dashboard/viewmsg'
+  post 'dashboard/viewmsg'
+  get 'dashboard/addcomment'
+  post 'dashboard/addcomment'
+  get 'dashboard/submitmsg'
+  post 'dashboard/submitmsg'
   get 'dashboard/addevent'
   post 'dashboard/addevent'
   get 'dashboard/viewtimeline'
